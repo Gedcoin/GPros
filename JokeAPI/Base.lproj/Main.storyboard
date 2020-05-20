@@ -287,8 +287,13 @@
                         <outlet property="CustomCategoryButton" destination="91t-uu-MJn" id="KnN-Ux-vLw"/>
                         <outlet property="DarkCategory" destination="Qwv-3N-sOZ" id="KCd-Fq-PoG"/>
                         <outlet property="MiscellaneousCategory" destination="Up1-5W-YVn" id="RJ6-cp-DZQ"/>
+                        <outlet property="NsfwFlag" destination="cAO-td-9Ip" id="wmJ-pu-3dV"/>
+                        <outlet property="PoliticalFlag" destination="bPA-Mp-xlP" id="5o8-dG-fHM"/>
                         <outlet property="ProgrammingCategory" destination="W8I-m7-hFL" id="yOp-Tc-kRH"/>
+                        <outlet property="RacistFlag" destination="eS3-gg-aaU" id="b4t-wr-bLz"/>
+                        <outlet property="ReligiousFlag" destination="qAN-IY-eFb" id="VCm-1m-vvL"/>
                         <outlet property="SearchStringTextfield" destination="azW-56-Nap" id="vnB-1q-4tn"/>
+                        <outlet property="SexistFlag" destination="EfP-Ie-SpA" id="jjM-bC-5rk"/>
                         <outlet property="SingleJokeType" destination="9Z2-NX-1ey" id="2Ie-XK-yva"/>
                         <outlet property="TwopartJokeType" destination="uNc-AJ-3uk" id="f6c-Ch-5AI"/>
                     </connections>
@@ -305,19 +310,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tI4-oj-Az5">
-                                <rect key="frame" x="115" y="251" width="185" height="61"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E4D-nM-Ezw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CID_Display_Joke" rowHeight="150" id="OTk-1q-QPe" customClass="JokeTableViewCell" customModule="JokeAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OTk-1q-QPe" id="yhl-xl-fuF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDq-kt-cnT">
+                                                    <rect key="frame" x="20" y="21" width="374" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNf-Vr-BuA">
+                                                    <rect key="frame" x="20" y="57" width="374" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPf-of-dZg">
+                                                    <rect key="frame" x="20" y="102" width="374" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jokeDelivery" destination="yPf-of-dZg" id="BDa-kC-lML"/>
+                                            <outlet property="jokeSetup" destination="LNf-Vr-BuA" id="tL8-aS-ckm"/>
+                                            <outlet property="jokeTypeLabel" destination="eDq-kt-cnT" id="TUL-XZ-9s1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fyZ-oR-zk7"/>
                     </view>
                     <connections>
-                        <outlet property="response" destination="tI4-oj-Az5" id="E5T-8B-J1z"/>
+                        <outlet property="tableView" destination="E4D-nM-Ezw" id="4jq-SV-dat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgg-lo-g1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

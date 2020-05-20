@@ -16,6 +16,8 @@
 		264796B1246DCF470031D687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264796AF246DCF470031D687 /* LaunchScreen.storyboard */; };
 		264796BC246DCF470031D687 /* JokeAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264796BB246DCF470031D687 /* JokeAPITests.swift */; };
 		264796C7246DCF470031D687 /* JokeAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264796C6246DCF470031D687 /* JokeAPIUITests.swift */; };
+		269EA3702474366500B61207 /* jokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269EA36F2474366400B61207 /* jokeData.swift */; };
+		269EA3722474489400B61207 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269EA3712474489400B61207 /* JokeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		264796C2246DCF470031D687 /* JokeAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JokeAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		264796C6246DCF470031D687 /* JokeAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPIUITests.swift; sourceTree = "<group>"; };
 		264796C8246DCF470031D687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		269EA36F2474366400B61207 /* jokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jokeData.swift; sourceTree = "<group>"; };
+		269EA3712474489400B61207 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				264796AF246DCF470031D687 /* LaunchScreen.storyboard */,
 				264796B2246DCF470031D687 /* Info.plist */,
 				26395EA02472784500599D93 /* ResponseViewController.swift */,
+				269EA36F2474366400B61207 /* jokeData.swift */,
+				269EA3712474489400B61207 /* JokeTableViewCell.swift */,
 			);
 			path = JokeAPI;
 			sourceTree = "<group>";
@@ -263,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				264796A9246DCF460031D687 /* ViewController.swift in Sources */,
+				269EA3702474366500B61207 /* jokeData.swift in Sources */,
+				269EA3722474489400B61207 /* JokeTableViewCell.swift in Sources */,
 				26395EA12472784500599D93 /* ResponseViewController.swift in Sources */,
 				264796A5246DCF460031D687 /* AppDelegate.swift in Sources */,
 				264796A7246DCF460031D687 /* SceneDelegate.swift in Sources */,
