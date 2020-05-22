@@ -43,16 +43,27 @@ class ResponseViewController: UIViewController, UITableViewDelegate, UITableView
         if jokeResultViewModel.jokeType == .single { 
             displayJokeCell.jokeTypeTextLabel.text = "Joke"
             displayJokeCell.jokeTypeLabel.text = jokeResultViewModel.singleJokeResult.joke
-            displayJokeCell.jokeSetup.isHidden = true
-            displayJokeCell.jokeDelivery.isHidden = true
-            displayJokeCell.jokeSetupTextLabel.isHidden = true
-            displayJokeCell.jokeDeliveryTextLabel.isHidden = true
+            
+            changeButtonState(selected: true, cell: displayJokeCell)
+            
+            displayJokeCell.singleJokeHeight.constant = 200
         } else {
             displayJokeCell.jokeTypeLabel.text = jokeResultViewModel.twoPartJokeResult.type
-            displayJokeCell.jokeSetup.text = jokeResultViewModel.twoPartJokeResult.setup
-            displayJokeCell.jokeDelivery.text = jokeResultViewModel.twoPartJokeResult.delivery
+            displayJokeCell.jokeSetupLabel.text = jokeResultViewModel.twoPartJokeResult.setup
+            displayJokeCell.jokeDeliveryLabel.text = jokeResultViewModel.twoPartJokeResult.delivery
+            
+            changeButtonState(selected: false, cell: displayJokeCell)
+            
+            displayJokeCell.singleJokeHeight.constant = 50
         }
         return displayJokeCell
+    }
+    
+    func changeButtonState(selected: Bool, cell: JokeTableViewCell) {
+        cell.jokeSetupLabel.isHidden = selected
+        cell.jokeDeliveryLabel.isHidden = selected
+        cell.jokeSetupTextLabel.isHidden = selected
+        cell.jokeDeliveryTextLabel.isHidden = selected
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

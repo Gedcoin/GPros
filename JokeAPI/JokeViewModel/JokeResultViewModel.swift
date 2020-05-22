@@ -16,7 +16,6 @@ class JokeResultViewModel {
     
     func callAPI(apiUrlString: String, completed: @escaping () -> () ) {
         if let url = URL(string: apiUrlString) {
-            print(apiUrlString)
             
             URLSession.shared.dataTask(with: url) {(data, response, error) in
                 if let data = data {

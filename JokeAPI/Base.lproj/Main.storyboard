@@ -15,12 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select category or categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tt-0w-baE">
-                                <rect key="frame" x="15" y="100" width="384" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhi-gd-LKd">
                                 <rect key="frame" x="15" y="144" width="73" height="30"/>
                                 <state key="normal" image="defaultRadioButton">
@@ -259,6 +253,12 @@
                                     <action selector="categorySelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MvA-ew-SWt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select category or categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tt-0w-baE">
+                                <rect key="frame" x="15" y="100" width="384" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -315,6 +315,12 @@
                         <outlet property="ProgrammingCategory" destination="W8I-m7-hFL" id="yOp-Tc-kRH"/>
                         <outlet property="SearchStringTextfield" destination="azW-56-Nap" id="vnB-1q-4tn"/>
                         <outlet property="singleJokeType" destination="9Z2-NX-1ey" id="XsI-T1-3dh"/>
+                        <outlet property="twoPartJokeType" destination="uNc-AJ-3uk" id="gdy-De-pZq"/>
+                        <outletCollection property="blacklistFlagButtons" destination="cAO-td-9Ip" collectionClass="NSMutableArray" id="Yfi-ca-T1H"/>
+                        <outletCollection property="blacklistFlagButtons" destination="qAN-IY-eFb" collectionClass="NSMutableArray" id="9nX-Vg-lAd"/>
+                        <outletCollection property="blacklistFlagButtons" destination="bPA-Mp-xlP" collectionClass="NSMutableArray" id="xjF-oa-UcH"/>
+                        <outletCollection property="blacklistFlagButtons" destination="eS3-gg-aaU" collectionClass="NSMutableArray" id="Ind-9J-8Oh"/>
+                        <outletCollection property="blacklistFlagButtons" destination="EfP-Ie-SpA" collectionClass="NSMutableArray" id="1KC-6Q-6B4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -419,12 +425,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="jokeDelivery" destination="yPf-of-dZg" id="BDa-kC-lML"/>
+                                            <outlet property="jokeDeliveryLabel" destination="yPf-of-dZg" id="BDa-kC-lML"/>
                                             <outlet property="jokeDeliveryTextLabel" destination="5mK-1b-wYQ" id="xhq-Ep-rub"/>
-                                            <outlet property="jokeSetup" destination="LNf-Vr-BuA" id="tL8-aS-ckm"/>
+                                            <outlet property="jokeSetupLabel" destination="LNf-Vr-BuA" id="tL8-aS-ckm"/>
                                             <outlet property="jokeSetupTextLabel" destination="Plm-NO-5ek" id="AqV-8R-CRu"/>
                                             <outlet property="jokeTypeLabel" destination="eDq-kt-cnT" id="TUL-XZ-9s1"/>
                                             <outlet property="jokeTypeTextLabel" destination="7x9-2r-RGh" id="5zy-U7-RR9"/>
+                                            <outlet property="singleJokeHeight" destination="u1N-up-r9J" id="CVl-lt-Lpf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

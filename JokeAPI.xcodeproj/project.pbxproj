@@ -116,7 +116,6 @@
 				264796A4246DCF460031D687 /* AppDelegate.swift */,
 				264796A6246DCF460031D687 /* SceneDelegate.swift */,
 				264796AA246DCF460031D687 /* Main.storyboard */,
-				264796A8246DCF460031D687 /* SearchViewController.swift */,
 				264796AD246DCF470031D687 /* Assets.xcassets */,
 				264796AF246DCF470031D687 /* LaunchScreen.storyboard */,
 				264796B2246DCF470031D687 /* Info.plist */,
@@ -163,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				26395EA02472784500599D93 /* ResponseViewController.swift */,
+				264796A8246DCF460031D687 /* SearchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
