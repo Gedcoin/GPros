@@ -21,13 +21,17 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var blacklistFlagButtons: [UIButton]!
     
-    
-    
     let jokeSearchViewModel = JokeSearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchStringTextfield.delegate = self
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+       get {
+          return .portrait
+       }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,15 +57,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         SearchStringTextfield.text = ""
     }
     
-    
-    
     func changeButtonState(selected: Bool) {
         ProgrammingCategory.isEnabled = selected
         MiscellaneousCategory.isEnabled = selected
         DarkCategory.isEnabled = selected
     }
-    
-   
     
     @IBAction func categorySelected(_ sender: UIButton) {
         var categoryObj = CategoryFlag(rawValue: sender.tag)
@@ -71,7 +71,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             CustomCategoryButton.isSelected = false
             ProgrammingCategory.isSelected = false
             changeButtonState(selected: false)
-            
         } else if categoryObj == .Custom {
             jokeSearchViewModel.categoryString = ""
             AnyCategoryButton.isSelected = false
@@ -103,8 +102,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         }
         jokeSearchViewModel.typeString = jokeSearchViewModel.setString(selected: sender.isSelected, mainString: jokeSearchViewModel.typeString, subString: "\(jokeTypeObj.name)")
     }
-    
-    
     
     @IBAction func SearchJoke(_ sender: UIButton) {
         jokeSearchViewModel.validateUrlString()

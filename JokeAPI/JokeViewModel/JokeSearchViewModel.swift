@@ -27,8 +27,7 @@ class JokeSearchViewModel {
            var resultString = ""
            if selected {
                resultString = mainString + subString + ","
-           }
-           else {
+           } else {
                resultString = mainString.replacingOccurrences(of: subString + ",", with: "")
            }
            return resultString
@@ -47,14 +46,6 @@ class JokeSearchViewModel {
             }
             baseURL = baseURL + typeString
         }
-        
-//        if let searchStringCount = SearchStringTextfield.text?.count {
-//            if searchStringCount > 0 {
-//                if let searchString = SearchStringTextfield.text {
-//                    baseURL = baseURL + "&contains=" + searchString
-//                }
-//            }
-//        }
         
         baseURL = baseURL.replacingOccurrences(of: ",?", with: "?")
         baseURL = baseURL.replacingOccurrences(of: "?&", with: "?")
