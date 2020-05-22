@@ -16,11 +16,15 @@ class ResponseViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        jokeResultViewModel.callAPI(apiUrlString: apiUrl) {
-            self.tableView.reloadData()
+        jokeResultViewModel.callAPI(apiUrlString: apiUrl) { (result, errorString) in
+            if result {
+                self.tableView.reloadData()
+            } else {
+                let alert = UIAlertController( title: "Error", message: errorString, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title:"OK", style:.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
-        
         tableView.delegate = self
         tableView.dataSource = self
     }

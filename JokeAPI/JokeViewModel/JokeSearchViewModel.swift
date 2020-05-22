@@ -10,7 +10,6 @@ import Foundation
 
 class JokeSearchViewModel {
     
-    //adding functions from search view controller as part of mvvm...
     var baseURL = "https://sv443.net/jokeapi/v2/joke/"
     var typeString = "&type="
     var blackListString = "blacklistFlags="

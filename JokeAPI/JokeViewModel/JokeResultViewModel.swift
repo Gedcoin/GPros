@@ -14,7 +14,7 @@ class JokeResultViewModel {
     var singleJokeResult: SingleJokeData!
     var twoPartJokeResult: TwoPartJokeData!
     
-    func callAPI(apiUrlString: String, completed: @escaping () -> () ) {
+    func callAPI(apiUrlString: String, completed: @escaping (Bool, String?) ->Void) {
         if let url = URL(string: apiUrlString) {
             
             URLSession.shared.dataTask(with: url) {(data, response, error) in
@@ -29,9 +29,13 @@ class JokeResultViewModel {
                                 self.jokeType = JokeType.twopart
                                 self.twoPartJokeResult = try? JSONDecoder().decode(TwoPartJokeData.self, from: data)
                             }
-                        }
-                        DispatchQueue.main.async {
-                            completed()
+                            DispatchQueue.main.async {
+                                completed(true,nil)
+                            }
+                        } else {
+                            DispatchQueue.main.async {
+                                completed(false, jsonData["message"] as? String)
+                            }
                         }
                     } catch {
                         print("Something occured: \(error.localizedDescription)")
