@@ -14,6 +14,10 @@ class JokeTableViewCell: UITableViewCell {
     @IBOutlet weak var jokeSetup: UILabel!
     @IBOutlet weak var jokeDelivery: UILabel!
     
+    @IBOutlet weak var jokeTypeTextLabel: UILabel!
+    @IBOutlet weak var jokeSetupTextLabel: UILabel!
+    @IBOutlet weak var jokeDeliveryTextLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
